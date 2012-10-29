@@ -414,6 +414,12 @@ typedef void (^FBSessionReauthorizeResultHandler)(FBSession *session,
                         defaultAudience:(FBSessionDefaultAudience)defaultAudience
                       completionHandler:(FBSessionReauthorizeResultHandler)handler;
 
+- (void)reauthorizeWithPermissions:(NSArray*)permissions
+                            isRead:(BOOL)isRead
+                          behavior:(FBSessionLoginBehavior)behavior
+                   defaultAudience:(FBSessionDefaultAudience)audience
+                 completionHandler:(FBSessionReauthorizeResultHandler)handler;
+
 /*!
  @abstract
  A helper method that is used to provide an implementation for 
